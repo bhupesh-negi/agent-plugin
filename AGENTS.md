@@ -10,6 +10,7 @@ This repo is the SuprSend plugin in the [Agent Plugins](https://agent-plugins.or
 | `mcp.json`                         | The hosted server, `{"type": "streamable-http", "url": "https://mcp.suprsend.com/mcp"}`. No auth fields: the spec leaves OAuth to the client. Its `$schema` version must equal the one in `plugin.json`. |
 | `skills/suprsend/SKILL.md`         | The one skill. The detailed skills stay on the server (`skill://` resources and `docs.get_skill`); do not copy them here.                                                                |
 | `.agents/plugins/marketplace.json` | For Codex only (`codex plugin marketplace add suprsend/agent-plugin`). Not part of the standard.                                                                 |
+| `.cursor-plugin/marketplace.json`  | For Cursor only (Dashboard → Plugins & MCPs → Add Marketplace → Import from Repo). Cursor's import reads this file, not `plugin.json`; without it Cursor says "No plugins found". Not part of the standard. |
 
 ## Rules
 
