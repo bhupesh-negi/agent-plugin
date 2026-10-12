@@ -14,7 +14,11 @@ jobs:
         with:
           node-version: 24
       - name: JSON files parse
-        run: for f in plugin.json mcp.json .agents/plugins/marketplace.json; do jq empty "$f"; done
+        run: for f in plugin.json mcp.json .agents/plugins/marketplace.json .cursor-plugin/marketplace.json .cursor-plugin/plugin.json; do jq empty "$f"; done
+      - name: The Cursor files match plugin.json
+        run: |
+          test "$(jq -r .version .cursor-plugin/plugin.json)" = "$(jq -r .version plugin.json)"
+          test "$(jq -r '.plugins[0].description' .cursor-plugin/marketplace.json)" = "$(jq -r .description plugin.json)"
       - name: Agent Plugins schemas
         run: npm install --no-save ajv@8 ajv-formats@3 && node scripts/validate.mjs
       - name: The skill has frontmatter with its folder name
