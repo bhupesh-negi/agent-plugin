@@ -42,7 +42,7 @@ Create a workflow that sends the "welcome" email when the event USER_SIGNUP come
 To fix one workspace or a set of tools, add the server with a custom URL instead of the plugin's default:
 
 - `https://mcp.suprsend.com/mcp/staging`: only the `staging` workspace.
-- `https://mcp.suprsend.com/mcp?tools=users.*,lists.*`: only these tool groups.
+- `https://mcp.suprsend.com/mcp?tools=users_*,lists_*`: only these tool groups.
 
 ## Support
 

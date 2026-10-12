@@ -6,7 +6,7 @@ license: MIT
 
 # SuprSend
 
-The SuprSend MCP server (`https://mcp.suprsend.com/mcp`) gives you live tools for the user's SuprSend account. The tools are named `<group>.<action>`, for example `users_get` or `workflows_save_draft`. The user signs in with their SuprSend account the first time that you call a tool.
+The SuprSend MCP server (`https://mcp.suprsend.com/mcp`) gives you live tools for the user's SuprSend account. The tools are named `<group>_<action>`, for example `users_get` or `workflows_save_draft`. The user signs in with their SuprSend account the first time that you call a tool.
 
 ## Read the SuprSend skill first
 
