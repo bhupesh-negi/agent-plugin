@@ -9,7 +9,7 @@ For Claude (web, desktop, mobile, Cowork, and Claude Code), use [`suprsend/claud
 | Part           | What it does                                                                                                                                                                                                                            |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **MCP server** | `https://mcp.suprsend.com/mcp`, hosted by SuprSend: tools for users, objects, tenants, lists, preferences, events, schemas, workflows, templates, translations, messages, and delivery data (read-only SQL). Nothing runs on your computer. |
-| **Skill**      | `suprsend`: when to use which tool, and to read the detailed SuprSend skill (workflow JSON, template content, SQL tables) from the server, directly or with `docs.get_skill`, before the agent writes one.                                               |
+| **Skill**      | `suprsend`: when to use which tool, and to read the detailed SuprSend skill (workflow JSON, template content, SQL tables) from the server, directly or with `docs_get_skill`, before the agent writes one.                                               |
 
 You need no API key: you sign in with your SuprSend account (OAuth). Admins get every tool; members get the read-only tools. The agent sees only the workspaces that your account can open.
 
@@ -42,7 +42,7 @@ Create a workflow that sends the "welcome" email when the event USER_SIGNUP come
 To fix one workspace or a set of tools, add the server with a custom URL instead of the plugin's default:
 
 - `https://mcp.suprsend.com/mcp/staging`: only the `staging` workspace.
-- `https://mcp.suprsend.com/mcp?tools=users.*,lists.*`: only these tool groups.
+- `https://mcp.suprsend.com/mcp?tools=users_*,lists_*`: only these tool groups.
 
 ## Support
 
