@@ -1,0 +1,15 @@
+{
+  "name": "suprsend",
+  "owner": {
+    "name": "SuprSend",
+    "email": "support@suprsend.com"
+  },
+  "plugins": [
+    {
+      "name": "suprsend",
+      "source": "./",
+      "description": "SuprSend for AI agents: the hosted SuprSend MCP server (users, preferences, tenants, lists, workflows, templates, events, delivery data) and a skill that guides the agent through it.",
+      "category": "Developer Tools"
+    }
+  ]
+}
