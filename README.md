@@ -20,11 +20,11 @@ You need no API key: you sign in with your SuprSend account (OAuth). Admins get 
 | **VS Code**            | Command Palette → **Chat: Install Plugin From Source** → `https://github.com/suprsend/agent-plugin`. The setting `chat.plugins.enabled` must be on. | VS Code asks you to sign in when the server starts.                                                       |
 | **GitHub Copilot CLI** | `copilot plugin install suprsend/agent-plugin`                                                                                            | Copilot CLI 1.0.83 or later. It asks you to sign in on first use.                                        |
 | **Codex**              | `codex plugin marketplace add suprsend/agent-plugin`, then install **suprsend**                                                           | `codex mcp login suprsend`                                                                                |
-| **Cursor**             | Dashboard → **Plugins & MCPs** → **Add Marketplace** → **Import from Repo** → `https://github.com/suprsend/agent-plugin`                    | **Not yet.** Cursor signs in only with dynamic client registration, which the SuprSend server does not offer yet. |
-| **Kiro**               | **Powers** → **Add Custom Power** → **Import power from GitHub** → `https://github.com/suprsend/agent-plugin`                                | **Not yet** by default: Kiro uses dynamic client registration.                                           |
-| Other clients          | Hermes Agent, OpenClaw, Grok Bot, NanoClaw, OpenHands: see the client's plugin docs.                                                      | Works when the client supports OAuth with Client ID Metadata Documents.                                  |
+| **Cursor**             | Dashboard → **Plugins & MCPs** → **Add Marketplace** → **Import from Repo** → `https://github.com/suprsend/agent-plugin`                    | Cursor asks you to sign in when the server first connects.                                               |
+| **Kiro**               | **Powers** → **Add Custom Power** → **Import power from GitHub** → `https://github.com/suprsend/agent-plugin`                                | Kiro asks you to sign in on first use.                                                                   |
+| Other clients          | Hermes Agent, OpenClaw, Grok Bot, NanoClaw, OpenHands: see the client's plugin docs.                                                      | Works with any client that supports MCP OAuth.                                                           |
 
-The SuprSend server signs in clients with [Client ID Metadata Documents](https://modelcontextprotocol.io/specification/draft/basic/authorization) (CIMD). A client that supports only dynamic client registration cannot sign in yet.
+The SuprSend server signs in clients with OAuth 2.1 as the [MCP authorization spec](https://modelcontextprotocol.io/specification/draft/basic/authorization) describes. It supports both dynamic client registration and Client ID Metadata Documents (CIMD), so any MCP client with OAuth support can sign in.
 
 ## Examples
 
